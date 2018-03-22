@@ -1,14 +1,25 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import {Provider} from 'react-redux';
+import {logger} from "redux-logger";
+import {StyleSheet, Text, View} from 'react-native';
+
+import Title from './src/js/containers/title';
+import rootReducer from "./src/js/reducers";
+import {createStore} from "redux";
+import applyMiddleware from "redux/es/applyMiddleware";
+
+// Providerに渡す用のストアを生成する
+let store = createStore(rootReducer, applyMiddleware(logger));
+console.disableYellowBox = true;
 
 export default class App extends React.Component {
   render() {
     return (
-      <View style={styles.container}>
-        <Text>Open up App.js to start working on your app!</Text>
-        <Text>Changes you make will automatically reload.</Text>
-        <Text>Shake your phone to open the developer menu.</Text>
-      </View>
+      <Provider store={store}>
+        <View style={styles.container}>
+          <Title />
+        </View>
+      </Provider>
     );
   }
 }

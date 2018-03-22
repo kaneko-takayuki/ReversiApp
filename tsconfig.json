@@ -1,6 +1,9 @@
 {
   "compilerOptions": {
-    "rootDir": "src/ts",
-    "outDir": "src/js"
+    "jsx": "react-native",     // jsx記法を使う
+    "lib": ["DOM", "ES2017"],  // どのライブラリを用いてコンパイルを行うか
+    "rootDir": "src/ts",       // TypeScriptのルートディレクトリ(コンパイル入力先)
+    "outDir": "src/js",        // JavaScriptのルートディレクトリ(コンパイル出力先)
+    "types": []
   }
 }
