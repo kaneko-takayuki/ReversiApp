@@ -6,6 +6,7 @@ import {Scene, Stack, Router} from 'react-native-router-flux';
 
 import Title from './src/js/containers/title';
 import Home from './src/js/containers/home';
+import Game from './src/js/containers/game';
 import rootReducer from "./src/js/reducers";
 import {createStore} from "redux";
 
@@ -19,8 +20,9 @@ export default class App extends React.Component {
       <Provider store={store}>
         <Router>
           <Stack key='root'>
-            <Scene key='app-title' initial component={Title} title='タイトル'/>
-            <Scene key='home' component={Home} title={'ホーム'}/>
+            <Scene key='app-title' component={Title} title='タイトル'/>
+            <Scene key='home' component={Home} title='ホーム' />
+            <Scene key='game' initial component={Game} title='ゲーム' />
           </Stack>
         </Router>
       </Provider>
