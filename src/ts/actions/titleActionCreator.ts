@@ -1,4 +1,5 @@
 import {Action} from 'redux';
+import {Actions} from 'react-native-router-flux';
 
 // Actionタイプを定義
 export const TitleActionTypes = {
@@ -16,5 +17,6 @@ export interface PressButtonAction extends Action{
 
 // Action生成関数
 export function pressButton(n: number): PressButtonAction{
+  Actions.home();
   return {type: TitleActionTypes.PRESS_BUTTON, n: n + 1};
 }

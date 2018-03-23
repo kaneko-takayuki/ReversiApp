@@ -1,7 +1,7 @@
-import {TitleActionTypes} from "../actions/titleActionCreator";
+import {TitleActionTypes} from '../actions/titleActionCreator';
 
 export interface titleProps {
-    n: number;
+  n: number;
 }
 
 const initState = {
@@ -10,11 +10,11 @@ const initState = {
 
 // タイトル画面用Reducer
 export function titleReducer(state: titleProps = initState, action){
-    switch(action.type){
-        case TitleActionTypes.PRESS_BUTTON:
-            return Object.assign({}, state, {n: action.n});
+  switch(action.type){
+    case TitleActionTypes.PRESS_BUTTON:
+      return Object.assign({}, state, {n: action.n});
 
-        default:
-            return state;
-    }
+    default:
+      return state;
+  }
 }
