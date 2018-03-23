@@ -17,6 +17,8 @@ yarn-debug.log*
 yarn-error.log*
 yarn.lock
 
+.DS_Store
 .idea
-src/js/**
 package-lock.json
+src/js/**
+assets/**
