@@ -1,7 +1,7 @@
 import * as React from 'react';
 import {connect} from 'react-redux';
 import {Button, Text, TouchableOpacity, View} from 'react-native';
-import {Audio} from 'expo';
+import 'NativeModules'
 
 import {titleProps} from '../reducers/titleReducer';
 import {pressButton} from '../actions/titleActionCreator';

@@ -1,7 +1,6 @@
 import * as React from 'react';
 import {connect} from 'react-redux';
 import {Text, TouchableOpacity, View} from 'react-native';
-import {Audio} from 'expo';
 
 import {homeProps} from '../reducers/homeReducer';
 import {beginCpuFight} from '../actions/homeActionCreator';

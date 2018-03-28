@@ -1,7 +1,6 @@
 import * as React from 'react';
 import {connect} from 'react-redux';
 import {View} from 'react-native';
-import {Audio} from 'expo';
 
 import {Board} from '../components/board'
 import {gameProps} from '../reducers/gameReducer';
