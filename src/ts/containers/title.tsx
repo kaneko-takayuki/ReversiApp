@@ -14,13 +14,13 @@ interface Props {
 
 class Title extends React.Component<Props, titleProps> {
   playSound = async () => {
-    const soundObject = new Audio.Sound();
-    try {
-      await soundObject.loadAsync(require('./../../../assets/sounds/beat.mp3'));
-      await soundObject.playAsync();
-    } catch (error) {
-      console.log('error!');
-    }
+    // const soundObject = new Audio.Sound();
+    // try {
+    //   // await soundObject.loadAsync(require('./../../../assets/sounds/beat.mp3'));
+    //   await soundObject.playAsync();
+    // } catch (error) {
+    //   console.log('error!');
+    // }
   };
 
 	render() {
